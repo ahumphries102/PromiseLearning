@@ -1,0 +1,22 @@
+{
+  "name": "junepromises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promiseslearning.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahumphries102/PromiseLearning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahumphries102/PromiseLearning/issues"
+  },
+  "homepage": "https://github.com/ahumphries102/PromiseLearning#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
