@@ -1,17 +1,19 @@
 const fetch = require( 'node-fetch')
 
-async function getJunk(){  
-  try{
-    let junk = await fetch('https://api.scryfall.com/cards/search?order=set&q=e%3Arna&unique=prints')
-    .then(response => response.json())
-    .then(result => result.data.forEach( result => {console.log(result.name)}))
-  }
-  catch(err){
-    console.log(err)
-  }
-}
+// async function getJunk(){  
+//   try{
+//     await fetch('http://localhost:5000/cats')
+//     //Parameter passed in then's function is the success value of the fetch. In this case it's the data from the URL.
+//     .then(dataReceived => dataReceived.json())
+//     .then(useData => console.log(useData))
+//   }
+//   catch(err){
+//     console.log(err)
+//   }
+// }
 
-getJunk()
+// getJunk()
+
 // const bedMade = ()=>{
 //   const bedmade = true
 //   return new Promise((resolve, reject)=>{
@@ -56,3 +58,24 @@ getJunk()
 // .catch( error => {
 //   console.error(error)
 // })
+
+
+const nuke = ()=>{
+  return new Promise((resolve, reject)=>{
+    try{
+    resolve(fetch('http://localhost:5000/cats')
+      .then(response=>response.json()))
+  }
+  catch(error){
+    console.log(error)
+  }
+  })
+}
+
+async function doggo(){
+  await fetch('http://localhost:5000/cats')
+  .then(getData=> getData.json())
+  .then(useData=>console.log(useData))
+}
+
+doggo()
